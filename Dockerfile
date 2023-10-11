@@ -15,10 +15,10 @@ RUN apt-get -y update && \
     # update-alternatives --install /usr/bin/python3-config python3-config /usr/bin/python3.8-config 1 && \
     # update-alternatives --set python3-config /usr/bin/python3.8-config
 
-RUN python3 -m pip install setuptools && \
-    python3 -m pip install adbutils robotframework
+# RUN python3 -m pip install setuptools && \
+#     python3 -m pip install adbutils robotframework
 
-RUN mkdir -p /code
-WORKDIR /code
+# RUN mkdir -p /code
+# WORKDIR /code
 
-COPY python_adb_example.py robot_adb_example.robot /code/
+# COPY python_adb_example.py robot_adb_example.robot /code/
