@@ -2,6 +2,10 @@ FROM ubuntu:22.04
 LABEL maintainer="Two Six Technologies <race@twosixlabs.com>"
 
 RUN apt-get update -y && \
+  apt install -y openssh-server && \
+  service ssh start
+
+RUN apt-get update -y && \
   apt install -y less curl unzip
 
 # Install Python 3.8 & Configure Python Environment
