@@ -1,16 +1,15 @@
 FROM ubuntu:22.04
 LABEL maintainer="Two Six Technologies <race@twosixlabs.com>"
 
-RUN apt-get update -y && \
-  apt install -y openssh-server && \
+RUN apt-get update -y
+
+RUN apt install -y openssh-server && \
   service ssh start
 
-RUN apt-get update -y && \
-  apt install -y less curl unzip
+RUN apt install -y less curl unzip
 
 # Install Python 3.8 & Configure Python Environment
-RUN apt-get -y update && \
-    apt-get install -y python3 python3-dev python3-pip && \
+RUN apt-get install -y python3 python3-dev python3-pip && \
     python3 -m pip install --upgrade --force-reinstall pip
     # update-alternatives --install /usr/bin/python python /usr/bin/python3.8 1 && \
     # update-alternatives --set python /usr/bin/python3.8 && \
