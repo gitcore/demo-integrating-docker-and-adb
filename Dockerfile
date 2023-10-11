@@ -4,7 +4,7 @@ LABEL maintainer="Two Six Technologies <race@twosixlabs.com>"
 RUN apt-get update -y
 
 RUN apt install -y openssh-server && \
-  service ssh start
+    service ssh start
 
 RUN apt install -y less curl unzip
 
